@@ -1,0 +1,19 @@
+name = "crm-system"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "crm_db"
+database_id = "your-database-id"
+
+[vars]
+JWT_SECRET = "your-jwt-secret-change-this-in-production"
+
+[env.production]
+name = "crm-system-prod"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "crm_db"
+database_id = "your-production-database-id"
